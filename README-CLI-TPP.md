@@ -276,7 +276,7 @@ Options:
 | `--format` | Generates the Certificate Signing Request in the specified format. Options: `pem` (default), `json`<br />pem: Generates the CSR in classic PEM format to be used as a file.<br />json: Generates the CSR in JSON format, suitable for REST API operations. |
 | `--key-curve` | Use to specify the ECDSA key curve. Options: `p256` (default), `p384`, `p521` |
 | `--key-file` | Use to specify a file name and a location where the resulting private key file should be written. Do not use in combination with `--csr` file. Example: `--key-file /path-to/example.key` |
-| `--key-password` | Use to specify a password for encrypting the private key. For a non-encrypted private key, omit this option and instead specify `--no-prompt`. Example: `--key-password file:/path-to/mypasswd.txt` |
+| `--key-password` | Use to specify a password for encrypting the private key. For a non-encrypted private key, omit this option and instead specify `--no-prompt`. Example: `--key-password file:/path-to/passwd.txt` |
 | `--key-size` | Use to specify a key size.  Default is 2048. |
 | `--key-type` | Use to specify a key type. Options: `rsa` (default), `ecdsa` |
 | `-l` | Use to specify the city or locality (L) for the Subject DN. |
