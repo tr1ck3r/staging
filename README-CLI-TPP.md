@@ -4,6 +4,13 @@ Venafi VCert is a command line utility designed to generate keys and simplify ce
 
 Click [here](https://github.com/Venafi/vcert/releases/latest) to download the latest version of VCert from https://github.com/Venafi/vcert/releases/latest
 
+## Quick Links
+- [Requesting a certificate](#certificate-request-usage)
+- [Downloading a certificate](#certificate-retrieval-usage)
+- [Renewing a certificate](#certificate-renewal-usage)
+- [Revoking a certificate](#certificate-revocation-usage)
+- [Usage Examples](#examples)
+
 ## Prerequisites
 
 1. A user account that has an authentication token with "certificate:manage,revoke" scope (i.e. access to the "Venafi VCert CLI" API Application as of 20.1) or has been granted WebSDK Access
