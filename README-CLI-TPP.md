@@ -65,7 +65,7 @@ Options:
 | `--chain`            | Use to include the certificate chain in the output, and to specify where to place it in the file. Options: `root-last` (default), `root-first`, `ignore` |
 | `--chain-file`       | Use to specify the name and location of an output file that will contain only the root and intermediate certificates applicable to the end-entity certificate. |
 | `--cn`               | Use to specify the common name (CN). This is required for Enrollment. |
-| `--csr`              | Use to specify the CSR and private key location. Options: `local` (default), `service`, `file`<br/>local: private key and CSR will be generated locally<br/>service: private key and CSR will be generated within Venafi Platform<br/>file: CSR will be read from a file by name<br/>Example: `--csr file:/path-to/csr.pem` |
+| `--csr`              | Use to specify the CSR and private key location. Options: `local` (default), `service`, `file`<br/>- local: private key and CSR will be generated locally<br/>- service: private key and CSR will be generated within Venafi Platform<br/>- file: CSR will be read from a file by name<br/>Example: `--csr file:/path-to/csr.pem` |
 | `--field`            | Use to specify Custom Fields in 'key=value' format. If many values are required for the same Custom Field (key), use the following syntax: `--field key1=value1` `--field key1=value2` ... |
 | `--file`             | Use to specify a name and location of an output file that will contain the private key and certificates when they are not written to their own files using `--key-file`, `--cert-file`, and/or `--chain-file`. Example: `--file /path-to/keycert.pem` |
 | `--format`           | Use to specify the output format.  PEM is the default format.  The `--file` option must be used with the PKCS#12 format to specify the keystore file. Options: `pem` (default), `json`, `pkcs12` |
@@ -118,7 +118,7 @@ Options:
 | `--chain`          | Use to include the certificate chain in the output, and to specify where to place it in the file. Options: `root-last` (default), `root-first`, `ignore` |
 | `--chain-file`     | Use to specify the name and location of an output file that will contain only the root and intermediate certificates applicable to the end-entity certificate. |
 | `--cn`             | Use to specify the common name (CN). This is required for Enrollment. |
-| `--csr`            | Use to specify the CSR and private key location. Options: `local` (default), `service`, `file`<br />local: private key and CSR will be generated locally<br />service: private key and CSR will be generated within Venafi Platform. Depending on policy, the private key may be reused<br />file: CSR will be read from a file by name<br />Example: `--csr file:/path-to/csr.pem` |
+| `--csr`            | Use to specify the CSR and private key location. Options: `local` (default), `service`, `file`<br />- local: private key and CSR will be generated locally<br />- service: private key and CSR will be generated within Venafi Platform. Depending on policy, the private key may be reused<br />- file: CSR will be read from a file by name<br />Example: `--csr file:/path-to/csr.pem` |
 | `--file`           | Use to specify a name and location of an output file that will contain the private key and certificates when they are not written to their own files using --key-file, --cert-file, and/or --chain-file. Example: `--file /path-to/keycert.pem` |
 | `--format`         | The --file option must be used with the PKCS#12 format to specify the keystore file. Options: `pem` (default), `json`, `pkcs12` |
 | `--id`             | Use to specify the unique identifier of the certificate returned by the enroll or renew actions.  Value may be specified as a string or read from a file by using the file: prefix. Example: `--id file:cert_id.txt` |
@@ -274,7 +274,7 @@ Options:
 | `-c` | Use to specify the country (C) for the Subject DN. |
 | `--cn` | Use to specify the common name (CN). This is required for enrollment except when providing a CSR file. |
 | `--csr-file` | Use to specify a file name and a location where the resulting CSR file should be written. Example: `--csr-file /path-to/example.req` |
-| `--format` | Generates the Certificate Signing Request in the specified format. Options: `pem` (default), `json`<br />pem: Generates the CSR in classic PEM format to be used as a file.<br />json: Generates the CSR in JSON format, suitable for REST API operations. |
+| `--format` | Generates the Certificate Signing Request in the specified format. Options: `pem` (default), `json`<br />- pem: Generates the CSR in classic PEM format to be used as a file.<br />- json: Generates the CSR in JSON format, suitable for REST API operations. |
 | `--key-curve` | Use to specify the ECDSA key curve. Options: `p256` (default), `p384`, `p521` |
 | `--key-file` | Use to specify a file name and a location where the resulting private key file should be written. Do not use in combination with `--csr` file. Example: `--key-file /path-to/example.key` |
 | `--key-password` | Use to specify a password for encrypting the private key. For a non-encrypted private key, omit this option and instead specify `--no-prompt`. Example: `--key-password file:/path-to/passwd.txt` |
