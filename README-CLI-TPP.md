@@ -260,3 +260,30 @@ Options:
 | `-u`             | Use to specify the URL of the Venafi Platform API server. Example: `-u https://tpp.example.com` |
 | `--username`     | Use to specify the username of a Venafi Platform user. Required if `--p12-file` or `--t` is not present and may not be combined with either. |
 | `--verbose`      | Use to increase the level of logging detail, which is helpful when troubleshooting issues. |
+
+### Appendix: Generating a new key pair and CSR
+```
+vcert gencsr --cn <common name> -o <organization> --ou <ou1> --ou <ou2> -l <locality> --st <state> -c <country> -key-file <private key file> -csr-file <csr file>
+```
+
+Options:
+
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| `-c` | Use to specify the country (C) for the Subject DN. |
+| `--cn` | Use to specify the common name (CN). This is required for enrollment except when providing a CSR file. |
+| `--csr-file` | Use to specify a file name and a location where the resulting CSR file should be written. Example: `--csr-file /tmp/newcsr.pem` |
+| `--format` | Generates the Certificate Signing Request in the specified format. Options: `pem` (default), `json`<br />pem: Generates the CSR in classic PEM format to be used as a file.<br />json: Generates the CSR in JSON format, suitable for REST API operations. |
+| `--key-curve` | Use to specify the ECDSA key curve. Options: `p256` (default), `p384`, `p521` |
+| `--key-file` | Use to specify a file name and a location where the resulting private key file should be written. Do not use in combination with `--csr` file. Example: `--key-file /path-to/newkey.pem` |
+| `--key-password` | Use to specify a password for encrypting the private key. For a non-encrypted private key, omit this option and instead specify `--no-prompt`. Example: `--key-password file:/path-to/mypasswd.txt` |
+| `--key-size` | Use to specify a key size.  Default is 2048. |
+| `--key-type` | Use to specify a key type. Options: `rsa` (default), `ecdsa` |
+| `-l` | Use to specify the city or locality (L) for the Subject DN. |
+| `--no-prompt` | Use to suppress the private key password prompt and not encrypt the private key. |
+| `-o` | Use to specify the organization (O) for the Subject DN. |
+| `--ou` | Use to specify an organizational unit (OU) for the Subject DN. To specify more than one, use spaces like this: `--ou "Engineering"` `--ou "Quality Assurance"` ... |
+| `--san-dns` | Use to specify a DNS Subject Alternative Name. To specify more than one, use spaces like this: `--san-dns test.abc.xyz` `--san-dns test1.abc.xyz` ... |
+| `--san-email` | Use to specify an Email Subject Alternative Name. This option can be repeated to specify more than one value, like this: `--san-email me@abc.xyz` `--san-email you@abc.xyz` ... |
+| `--san-ip` | Use to specify an IP Address Subject Alternative Name. This option can be repeated to specify more than one value, like this: `--san-ip 1.1.1.1` `--san-ip 2.2.2.2` ... |
+| `--st` | Use to specify the state or province (ST) for the Subject DN. |
