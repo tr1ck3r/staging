@@ -26,11 +26,11 @@ VCert is compatible with Trust Protection Platform 17.3 and higher. The Custom F
 
 The following options apply to the `enroll`, `pickup`, `renew`, and `revoke` actions:
 
-| Command             | Description                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | `--config`          | Use to specify INI configuration file containing connection details.  Available parameters:  *tpp_url*, *tpp_user*, *tpp_password*, *tpp_zone*, *trust_bundle*, *test_mode* |
 | `--no-prompt`       | Use to exclude password prompts.  If you enable the prompt and you enter incorrect information, an error is displayed.  This option is useful with scripting. |
-| `--t`               | Use to specify the token required to authenticate with Venafi Platform 19.2 (and higher).  See the [Appendix](#appendix--obtaining-an-authorization-token) for help using VCert to obtain a new authorization token. |
+| `--t`               | Use to specify the token required to authenticate with Venafi Platform 19.2 (and higher).  See the [Appendix](#appendix-obtaining-an-authorization-token) for help using VCert to obtain a new authorization token. |
 | `--test-mode`       | Use to test operations without connecting to Venafi Platform.  This option is useful for integration tests where the test environment does not have access to Venafi Platform.  Default is false. |
 | `--test-mode-delay` | Use to specify the maximum number of seconds for the random test-mode connection delay.  Default is 15 (seconds). |
 | `--timeout`         | Use to specify the maximum amount of time to wait in seconds for a certificate to be processed by Venafi Platform. Default is 120 (seconds). |
@@ -48,7 +48,7 @@ VCert enroll -u <tpp url> --tpp-user <username> --tpp-password <password> --cn <
 ```
 Options:
 
-| Command              | Description                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | `--app-info`         | Use to identify the application requesting the certificate with details like vendor name and vendor product. Example: `--app-info "Venafi VCert CLI"` |
 | `--cert-file`        | Use to specify the name and location of an output file that will contain only the end-entity certificate. Example: `--cert-file /path-to/example.crt` |
@@ -83,7 +83,7 @@ VCert pickup -u <tpp url> --tpp-user <username> --tpp-password <password> [--pic
 ```
 Options:
 
-| Command            | Description                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | `--cert-file`      | Use to specify the name and location of an output file that will contain only the end-entity certificate. Example: `--cert-file /path-to/example.crt` |
 | `--chain`          | Use to include the certificate chain in the output, and to specify where to place it in the file. Options:  `root-last` (default), `root-first`, `ignore` |
@@ -102,7 +102,7 @@ VCert renew -u <tpp url> --tpp-user <username> --tpp-password <password> [--id <
 ```
 Options:
 
-| Command            | Description                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | `--cert-file`      | Use to specify the name and location of an output file that will contain only the end-entity certificate. Example: `--cert-file /path-to/example.crt` |
 | `--chain`          | Use to include the certificate chain in the output, and to specify where to place it in the file. Options: `root-last` (default), `root-first`, `ignore` |
@@ -133,7 +133,7 @@ VCert revoke -u <tpp url> --tpp-user <username> --tpp-password <password> [--id 
 ```
 Options:
 
-| Command        | Description                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
 | `--id`         | Use to specify the unique identifier of the certificate to revoke.  Value may be specified as a string or read from a file using the `file:` prefix. |
 | `--no-retire`  | Do not disable certificate. Use this option if you intend to enroll a new version of the certificate later.  Works only with `--id` |
@@ -238,7 +238,7 @@ VCert getcred -u <tpp url> --p12-file <client cert file> --p12-password <client 
 ```
 Options:
 
-| Command          | Description                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | `--client-id`    | Use to specify the application that will be using the token. "vcert-cli" is the default. |
 | `--format`       | Specify "json" to get JSON formatted output instead of the plain text default. |
