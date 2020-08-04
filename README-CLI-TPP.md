@@ -12,7 +12,7 @@ Click [here](https://github.com/Venafi/vcert/releases/latest) to download the la
 - [Options for revoking a certificate using the `revoke` action](#certificate-revocation-usage)
 - [Options common to the `enroll`, `pickup`, `renew`, and `revoke` actions](#general-command-line-options)
 - [Options for obtaining a new authorization token using the `getcred` action](#appendix-obtaining-an-authorization-token)
-- [Options for generating a new key pair and CSR for manual enrollment using the `gencsr` action](#appendix-generating-a-new-key-pair-and-csr)
+- [Options for generating a new key pair and CSR using the `gencsr` action (for manual enrollment)](#appendix-generating-a-new-key-pair-and-csr)
 
 ## Prerequisites
 
