@@ -50,6 +50,10 @@ The following options apply to the `enroll`, `pickup`, `renew`, and `revoke` act
 | `-u`                | Use to specify the URL of the Venafi Platform API server. Example: `-u https://tpp.venafi.example` |
 | `--verbose`         | Use to increase the level of logging detail, which is helpful when troubleshooting issues. |
 
+### Environment Variables
+
+As an alternative to specifying token, trust bundle, url, and/or zone via the command line or in a config file, VCert supports supplying those values using environment variables `VCERT_APIKEY`, `VCERT_TRUST_BUNDLE`, `VCERT_URL`, and `VCERT_ZONE` respectively.
+
 ## Certificate Request Usage
 ```
 VCert enroll -u <tpp url> -t <auth token> --cn <common name> -z <zone>
