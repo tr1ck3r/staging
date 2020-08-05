@@ -174,7 +174,7 @@ Submit a Venafi Cloud request for renewing a certificate using the enrollment (p
 ```
 VCert renew -k 3dfcc6dc-7309-4dcf-aa7c-5d7a2ee368b4 --id "{7428fac3-d0e8-4679-9f48-d9e867a326ca}"
 ```
-Submit a Venafi Cloud request for enrolling a certificate using the expiring certificate file:
+Submit a Venafi Cloud request for renewing a certificate using the expiring certificate file:
 ```
 VCert renew -k 3dfcc6dc-7309-4dcf-aa7c-5d7a2ee368b4 --thumbprint file:/opt/pki/demo.crt
 ```
