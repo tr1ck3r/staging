@@ -231,7 +231,7 @@ Submit a Trust Protection Platform request for renewing a certificate using the 
 ```
 VCert renew -u https://tpp.venafi.example -t "ql8AEpCtGSv61XGfAknXIA==" --id "\VED\Policy\DevOps Certificates\demo.venafi.example"
 ```
-Submit a Trust Protection Platform request for enrolling a certificate using the expiring certificate file:
+Submit a Trust Protection Platform request for renewing a certificate using the expiring certificate file:
 ```
 VCert renew -u https://tpp.venafi.example -t "ql8AEpCtGSv61XGfAknXIA==" --thumbprint file:/opt/pki/demo.crt
 ```
