@@ -106,9 +106,9 @@ Options:
 
 ## Certificate Renewal Usage
 ```
-VCert renew -u <tpp url> -t <auth token> [--id <req id> | --thumbprint <sha1 thumb>]
+VCert renew -u <tpp url> -t <auth token> [--id <request id> | --thumbprint <sha1 thumb>]
 
-VCert renew -u <tpp url> --tpp-user <username> --tpp-password <password> [--id <req id> | --thumbprint <sha1 thumb>]
+VCert renew -u <tpp url> --tpp-user <username> --tpp-password <password> [--id <request id> | --thumbprint <sha1 thumb>]
 ```
 Options:
 
@@ -137,9 +137,9 @@ Options:
 
 ## Certificate Revocation Usage
 ```
-VCert revoke -u <tpp url> -t <auth token> [--id <req id> | --thumbprint <sha1 thumb>]
+VCert revoke -u <tpp url> -t <auth token> [--id <request id> | --thumbprint <sha1 thumb>]
 
-VCert revoke -u <tpp url> --tpp-user <username> --tpp-password <password> [--id <req id> | --thumbprint <sha1 thumb>]
+VCert revoke -u <tpp url> --tpp-user <username> --tpp-password <password> [--id <request id> | --thumbprint <sha1 thumb>]
 ```
 Options:
 
