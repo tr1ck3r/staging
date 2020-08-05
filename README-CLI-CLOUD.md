@@ -5,11 +5,11 @@ Venafi VCert is a command line utility designed to generate keys and simplify ce
 The following content applies to the latest version of VCert CLI, click [here](https://github.com/Venafi/vcert/releases/latest) to download it from https://github.com/Venafi/vcert/releases/latest.
 
 ## Quick Links
-- [Usage Examples](#examples)
-- [Options for requesting a certificate using the `enroll` action](#certificate-request-usage)
-- [Options for downloading a certificate using the `pickup` action](#certificate-retrieval-usage)
-- [Options for renewing a certificate using the `renew` action](#certificate-renewal-usage)
-- [Options common to the `enroll`, `pickup`, and `renew` actions](#general-command-line-options)
+- [Detailed Usage Examples](#examples)
+- [Options for requesting a certificate using the `enroll` action](#certificate-request-parameters)
+- [Options for downloading a certificate using the `pickup` action](#certificate-retrieval-parameters)
+- [Options for renewing a certificate using the `renew` action](#certificate-renewal-parameters)
+- [Options common to the `enroll`, `pickup`, and `renew` actions](#general-command-line-parameters)
 - [Options for generating a new key pair and CSR using the `gencsr` action (for manual enrollment)](#generating-a-new-key-pair-and-csr)
 
 ## Prerequisites
@@ -30,7 +30,7 @@ The following content applies to the latest version of VCert CLI, click [here](h
 4. A DevOps Project exists to which you have been granted access.
 5. A Zone has exists within the Project that uses the Issuing Template, and you know the Zone ID.
 
-## General Command Line Options
+## General Command Line Parameters
 
 The following options apply to the `enroll`, `pickup`, and `renew` actions:
 
@@ -49,7 +49,7 @@ The following options apply to the `enroll`, `pickup`, and `renew` actions:
 
 As an alternative to specifying API key, trust bundle, and/or zone via the command line or in a config file, VCert supports supplying those values using environment variables `VCERT_APIKEY`, `VCERT_TRUST_BUNDLE`, and `VCERT_ZONE` respectively.
 
-## Certificate Request Usage
+## Certificate Request Parameters
 ```
 VCert enroll -k <api key> --cn <common name> -z <zone id>
 ```
@@ -74,7 +74,7 @@ Options:
 | `--san-dns`          | Use to specify a DNS Subject Alternative Name. To specify more than one, use spaces, like this: `--san-dns san1.example.com` `--san-dns san2.example.com` ... |
 | `-z`                 | Use to specify the DevOps Project Zone where the certificate will be located. Example: `-z vvvvvvvv-wwww-xxxx-yyyy-zzzzzzzzzzzz` |
 
-## Certificate Retrieval Usage
+## Certificate Retrieval Parameters
 ```
 VCert pickup -k <api key> [--pickup-id <request id> | --pickup-id-file <file name>]
 ```
@@ -91,7 +91,7 @@ Options:
 | `--pickup-id-file` | Use to specify a file name that contains the unique identifier of the certificate returned by the enroll or renew actions if --no-pickup was used or a timeout occurred. Required when `--pickup-id` is not specified. |
 
 
-## Certificate Renewal Usage
+## Certificate Renewal Parameters
 ```
 VCert renew -k <api key> [--id <request id> | --thumbprint <sha1 thumb>]
 ```
