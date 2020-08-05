@@ -5,12 +5,12 @@ Venafi VCert is a command line utility designed to generate keys and simplify ce
 The following content applies to the latest version of VCert CLI, click [here](https://github.com/Venafi/vcert/releases/latest) to download it from https://github.com/Venafi/vcert/releases/latest.
 
 ## Quick Links
-- [Usage Examples](#examples)
-- [Options for requesting a certificate using the `enroll` action](#certificate-request-usage)
-- [Options for downloading a certificate using the `pickup` action](#certificate-retrieval-usage)
-- [Options for renewing a certificate using the `renew` action](#certificate-renewal-usage)
-- [Options for revoking a certificate using the `revoke` action](#certificate-revocation-usage)
-- [Options common to the `enroll`, `pickup`, `renew`, and `revoke` actions](#general-command-line-options)
+- [Detailed Usage Examples](#examples)
+- [Options for requesting a certificate using the `enroll` action](#certificate-request-parameters)
+- [Options for downloading a certificate using the `pickup` action](#certificate-retrieval-parameters)
+- [Options for renewing a certificate using the `renew` action](#certificate-renewal-parameters)
+- [Options for revoking a certificate using the `revoke` action](#certificate-revocation-parameters)
+- [Options common to the `enroll`, `pickup`, `renew`, and `revoke` actions](#general-command-line-parameters)
 - [Options for obtaining a new authorization token using the `getcred` action](#obtaining-an-authorization-token)
 - [Options for generating a new key pair and CSR using the `gencsr` action (for manual enrollment)](#generating-a-new-key-pair-and-csr)
 
@@ -32,7 +32,7 @@ The following content applies to the latest version of VCert CLI, click [here](h
 
 VCert is compatible with Trust Protection Platform 17.3 and higher. The Custom Fields and Instance Tracking features require 18.2 or higher. Token Authentication requires 19.2 or higher; for earlier versions, username/password authentication (deprecated) applies.
 
-## General Command Line Options
+## General Command Line Parameters
 
 The following options apply to the `enroll`, `pickup`, `renew`, and `revoke` actions:
 
@@ -54,7 +54,7 @@ The following options apply to the `enroll`, `pickup`, `renew`, and `revoke` act
 
 As an alternative to specifying token, trust bundle, url, and/or zone via the command line or in a config file, VCert supports supplying those values using environment variables `VCERT_APIKEY`, `VCERT_TRUST_BUNDLE`, `VCERT_URL`, and `VCERT_ZONE` respectively.
 
-## Certificate Request Usage
+## Certificate Request Parameters
 ```
 VCert enroll -u <tpp url> -t <auth token> --cn <common name> -z <zone>
 
@@ -89,7 +89,7 @@ Options:
 | `--tls-address`      | Use to specify the hostname, FQDN or IP address and TCP port where the certificate can be validated after issuance and installation. Only allowed when `--instance` is also specified. Example: `--tls-address 10.20.30.40:443` |
 | `-z`                 | Use to specify the folder path where the certificate object will be placed. VCert prepends \VED\Policy\, so you only need to specify child folders under the root Policy folder. Example: `-z DevOps\CorpApp` |
 
-## Certificate Retrieval Usage
+## Certificate Retrieval Parameters
 ```
 VCert pickup -u <tpp url> -t <auth token> [--pickup-id <request id> | --pickup-id-file <file name>]
 
@@ -108,7 +108,7 @@ Options:
 | `--pickup-id-file` | Use to specify a file name that contains the unique identifier of the certificate returned by the enroll or renew actions if --no-pickup was used or a timeout occurred. Required when `--pickup-id` is not specified. |
 
 
-## Certificate Renewal Usage
+## Certificate Renewal Parameters
 ```
 VCert renew -u <tpp url> -t <auth token> [--id <request id> | --thumbprint <sha1 thumb>]
 
@@ -138,8 +138,7 @@ Options:
 | `--san-ip`         | Use to specify an IP Address Subject Alternative Name.  To specify more than one, use spaces, like this: `--san-ip 10.20.30.1` `--san-ip 10.20.30.2` ... |
 | `--thumbprint`     | Use to specify the SHA1 thumbprint of the certificate to renew. Value may be specified as a string or read from the certificate file using the `file:` prefix. |
 
-
-## Certificate Revocation Usage
+## Certificate Revocation Parameters
 ```
 VCert revoke -u <tpp url> -t <auth token> [--id <request id> | --thumbprint <sha1 thumb>]
 
