@@ -2,7 +2,7 @@
 
 Venafi VCert is a command line utility designed to generate keys and simplify certificate acquisition by eliminating the need to write code to interact with the Venafi REST API. VCert is available in 32 and 64 bit versions for Linux, Windows, and macOS.
 
-Click [here](https://github.com/Venafi/vcert/releases/latest) to download the latest version of VCert from https://github.com/Venafi/vcert/releases/latest
+The following content applies to the latest version of VCert CLI. Click [here](https://github.com/Venafi/vcert/releases/latest) to download it from https://github.com/Venafi/vcert/releases/latest.
 
 ## Quick Links
 - [Usage Examples](#examples)
@@ -47,7 +47,7 @@ The following options apply to the `enroll`, `pickup`, and `renew` actions:
 
 ### Environment Variables
 
-As an alternative to specifying API key, trust bundle, and/or zone via the command line or in a config file, VCert supports supplying those values from environment variables `VCERT_APIKEY`, `VCERT_TRUST_BUNDLE`, and `VCERT_ZONE` respectively.
+As an alternative to specifying API key, trust bundle, and/or zone via the command line or in a config file, VCert supports supplying those values using environment variables `VCERT_APIKEY`, `VCERT_TRUST_BUNDLE`, and `VCERT_ZONE` respectively.
 
 ## Certificate Request Usage
 ```
