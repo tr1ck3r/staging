@@ -45,6 +45,10 @@ The following options apply to the `enroll`, `pickup`, and `renew` actions:
 | `--trust-bundle`    | Use to specify a file with PEM formatted certificates to be used as trust anchors when communicating with Venafi Cloud.  Generally not needed because Venafi Cloud is secured by a publicly trusted certificate but it may be needed if your organization requires VCert to traverse a proxy server. VCert uses the trust store of your operating system for this purpose if not specified. Example: `--trust-bundle /path-to/bundle.pem` |
 | `--verbose`         | Use to increase the level of logging detail, which is helpful when troubleshooting issues. |
 
+### Environment Variables
+
+As an alternative to specifying API key, trust bundle, and/or zone via the command line or in a config file, VCert supports supplying those values from environment variables `VCERT_APIKEY`, `VCERT_TRUST_BUNDLE`, and `VCERT_ZONE` respectively.
+
 ## Certificate Request Usage
 ```
 VCert enroll -k <api key> --cn <common name> -z <zone id>
