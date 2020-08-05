@@ -153,7 +153,7 @@ Options:
 
 ## Examples
 
-For the purposes of the following examples assume that the Trust Protection Platform REST API is available at https://tpp.venafi.example/vedsdk, and that a user account named “DevOps” has been created with an authentication token of "ql8AEpCtGSv61XGfAknXIA==" that has "certificate:manage,revoke" scope, a password of “Passw0rd”, and has been granted “WebSDK Access”. Also assume that a folder has been created at the root of the Policy Tree called “DevOps Certificates” and the DevOps user has been granted View, Read, Write, Create, Revoke, and Private Key Read permissions to it.  Lastly, assume that a CA Template has been created and assigned to the DevOps Certificates folder along with other typical policy settings (organization, city, state, country, key size, whitelisted domains, etc.).
+For the purposes of the following examples assume that the Trust Protection Platform REST API is available at https://tpp.venafi.example/vedsdk, and that a user account named "DevOps" has been created with an authentication token of "ql8AEpCtGSv61XGfAknXIA==" that has "certificate:manage,revoke" scope, a password of "Passw0rd", and has been granted "WebSDK Access". Also assume that a folder has been created at the root of the Policy Tree called "DevOps Certificates" and the DevOps user has been granted View, Read, Write, Create, Revoke, and Private Key Read permissions to it.  Lastly, assume that a CA Template has been created and assigned to the DevOps Certificates folder along with other typical policy settings (organization, city, state, country, key size, whitelisted domains, etc.).
 
 Use the help to view the command line syntax for enroll:
 ```
@@ -185,7 +185,7 @@ VCert enroll -u https://tpp.venafi.example -t "ql8AEpCtGSv61XGfAknXIA==" -z "Dev
 ```
 Submit a Trust Protection Platform request for enrolling a certificate where the certificate and private key are output using JSON syntax to a file called json.txt:
 ```
-VCert enroll -u https://tpp.venafi.example -t "ql8AEpCtGSv61XGfAknXIA==" -z "DevOps Certificates" --key-password Passw0rd --cn json-to-file.venafi.example --format json --file json.txt
+VCert enroll -u https://tpp.venafi.example -t "ql8AEpCtGSv61XGfAknXIA==" -z "DevOps Certificates" --key-password Passw0rd --cn json-to-file.venafi.example --format json --file keycert.json
 ```
 Submit a Trust Protection Platform request for enrolling a certificate where only the certificate and private key are output, no chain certificates:
 ```
