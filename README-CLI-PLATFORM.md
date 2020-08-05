@@ -1,4 +1,4 @@
-# VCert CLI for Venafi Trust Protection Platform
+# VCert CLI for Venafi Trust Protection Platform&trade;
 
 Venafi VCert is a command line utility designed to generate keys and simplify certificate acquisition by eliminating the need to write code to interact with the Venafi REST API. VCert is available in 32 and 64 bit versions for Linux, Windows, and macOS.
 
