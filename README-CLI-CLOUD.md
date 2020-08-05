@@ -89,7 +89,7 @@ Options:
 
 ## Certificate Renewal Usage
 ```
-VCert renew -k <api key> [--id <req id> | --thumbprint <sha1 thumb>]
+VCert renew -k <api key> [--id <request id> | --thumbprint <sha1 thumb>]
 ```
 Options:
 
