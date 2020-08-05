@@ -266,7 +266,7 @@ Options:
 
 ### Generating a new key pair and CSR
 ```
-vcert gencsr --cn <common name> -o <organization> --ou <ou1> --ou <ou2> -l <locality> --st <state> -c <country> -key-file <private key file> -csr-file <csr file>
+vcert gencsr --cn <common name> -o <organization> --ou <ou1> --ou <ou2> -l <locality> --st <state> -c <country> --key-file <private key file> --csr-file <csr file>
 ```
 
 Options:
