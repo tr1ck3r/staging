@@ -1,5 +1,7 @@
 # VCert CLI for Venafi Cloud
 
+TEST
+
 Venafi VCert is a command line utility designed to generate keys and simplify certificate acquisition by eliminating the need to write code to interact with the Venafi REST API. VCert is available in 32 and 64 bit versions for Linux, Windows, and macOS.
 
 The following content applies to the latest version of VCert CLI, click [here](https://github.com/Venafi/vcert/releases/latest) to download it from https://github.com/Venafi/vcert/releases/latest.
