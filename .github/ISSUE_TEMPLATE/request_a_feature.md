@@ -1,6 +1,7 @@
 ---
 name: Request a feature
 about: Tell us about your idea for improvement!
+labels: enhancement
 
 ---
 

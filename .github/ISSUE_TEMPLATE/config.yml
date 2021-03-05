@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Slack Community for Venafi Open Source Projects
+  - name: Join us on Slack!
     url: https://join.slack.com/t/venafi-integrations/shared_invite/zt-i8fwc379-kDJlmzU8OiIQOJFSwiA~dg
     about: Interact with other customers and the Venafi engineering and product teams
-  - name: Security issues and general questions that can wait to be answered within a few days
-    url: opensource@venafi.com
-    about: Report security issues here
+  - name: Report a security issue
+    url: mailto:opensource@venafi.com
+    about: Venafi takes security very seriously so please only use email to report suspected security issues

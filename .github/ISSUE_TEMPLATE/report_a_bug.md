@@ -1,6 +1,7 @@
 ---
 name: Report a bug
 about: Let us know what isn't working right!
+labels: bug
 
 ---
 
