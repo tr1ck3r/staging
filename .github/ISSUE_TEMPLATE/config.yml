@@ -4,8 +4,5 @@ contact_links:
     url: https://join.slack.com/t/venafi-integrations/shared_invite/zt-i8fwc379-kDJlmzU8OiIQOJFSwiA~dg
     about: Interact with other customers and the Venafi engineering and product teams
   - name: Report a security issue
-    url: https://github.com/tr1ck3r/staging/blob/master/SECURITY.md
-    about: Venafi takes security very seriously so please only use email to report suspected security issues
-  - name: Try email?
-    email: mailto:ryan@supertreat.xyz
-    about: Blah blah blah
+    url: https://support.venafi.com/hc/en-us/requests/new
+    about: Venafi takes security very seriously so please email us the details at opensource@venafi.com
