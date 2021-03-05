@@ -1,7 +1,8 @@
 ---
-name: \U0001F41B Report a bug
+name: "\U0001F41B Report a bug"
 about: Let us know what isn't working right!
 labels: bug
+
 ---
 
 <!-- 
