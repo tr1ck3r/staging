@@ -5,4 +5,4 @@ contact_links:
     about: Interact with other customers and the Venafi engineering and product teams
   - name: Report a security issue
     url: https://support.venafi.com/hc/en-us/requests/new
-    about: Venafi takes security very seriously so please email us the details at <a href="mailto:opensource@venafi.com">opensource@venafi.com</a>
+    about: Venafi takes security very seriously so please email us the details at [opensource@venafi.com](mailto:opensource@venafi.com)
