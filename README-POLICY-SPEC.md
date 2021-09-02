@@ -73,7 +73,7 @@ All parameters in a specification are optional thus `{}` is the most simple vali
 specification and results in a policy that uses TPP or VaaS defaults.
 
 | Parameter | Data Type | Description |
-| :---- | :---- | :---- |
+| ---- | ---- | ---- |
 | `policy`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |||
 | &emsp;`domains` |string&nbsp;array| Specifies domain suffixes that are permitted in Common Name (CN) and DNS Subject Alternative Name (SAN) values |
 | &emsp;`wildcardAllowed` |boolean| Indicates whether CN and DNS SAN values may specify wildcards like "*.example.com" |
