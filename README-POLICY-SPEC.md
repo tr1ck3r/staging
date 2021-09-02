@@ -11,8 +11,8 @@ The structure of the _Venafi Certificate and Key Policy Specification_ is shown
 below and is the same starter policy that can be output by executing the `vcert 
 getpolicy --starter` command. The specification has two sections, "policy" and 
 "defaults". The "policy" section specifies values with which new certificate requests 
-must comply and the "defaults" section specifies values that are recommended for use
-in certificate requests when not specified or overridden.  VCert also supports YAML formatted specifications as input.
+must comply and the "defaults" section specifies values that are recommended for use 
+in certificate requests when those values are not specified or overridden.  VCert also supports YAML formatted specifications as input.
 
 ```json
 {
