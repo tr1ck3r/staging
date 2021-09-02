@@ -79,7 +79,7 @@ specification and results in a policy that uses TPP or VaaS defaults.
 | &emsp;`wildcardAllowed` |boolean| Indicates whether CN and DNS SAN values may specify wildcards like "*.example.com" |
 | &emsp;`autoInstalled` |boolean| ![TPP Only](https://img.shields.io/badge/TPP%20Only-orange.svg) Indicates whether the requested certificate will be automatically installed (i.e. provisioned) |
 | &emsp;`maxValidDays` |integer| Number of days for which the requested certificate will be valid.  May be ignored if the integration with the issuing CA does not support specific end dates. |
-| &emsp;`certificateAuthority` |string| TPP: the distinguished name of a CA Template object.<br />For example, "\VED\Policy\Certificate Authorites\Entrust Advantage"<br /><br />VaaS: CA Account Type ("DIGICERT", "ENTRUST", "GLOBALSIGN", or "BUILTIN"), CA Account Name (as it appears in the web console), and CA Product Type delimited by backslash characters.<br />For example, "DIGICERT\My DigiCert Account\ssl_plus" |
+| &emsp;`certificateAuthority` |string| **TPP**: the distinguished name of a CA Template object.<br />For example, "\VED\Policy\Certificate Authorites\Entrust Advantage"<br /><br />**VaaS**: CA Account Type ("DIGICERT", "ENTRUST", "GLOBALSIGN", or "BUILTIN"), CA Account Name (as it appears in the web console), and CA Product Type delimited by backslash characters.<br />For example, "DIGICERT\My DigiCert Account\ssl_plus" |
 | &emsp;`subject` |||
 | &emsp;&emsp;`orgs` | string&nbsp;array | Organization (O) values that are permitted |
 | &emsp;&emsp;`orgUnits` | string&nbsp;array | Organizational Unit (OU) values that are permitted |
