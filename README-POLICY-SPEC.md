@@ -15,7 +15,7 @@ getpolicy --starter` command. The specification has two sections, "policy" and
 "defaults". The "policy" section specifies values with which new certificate requests 
 must comply and the "defaults" section specifies values that are recommended for use 
 in certificate requests when those values are not specified or overridden. 
-VCert also supports YAML formatted specifications as input.
+VCert also supports YAML formatted input specifications.
 
 ```json
 {
@@ -98,9 +98,9 @@ specification and results in a policy that uses TPP or VaaS defaults.
 | &nbsp;&nbsp;&nbsp;&nbsp;`uriAllowed` | boolean |Indicates whether Uniform Resource Indicator (URI) Subject Alternative Names are permitted ![TPP Only](https://img.shields.io/badge/TPP%20Only-orange.svg)|
 | &nbsp;&nbsp;&nbsp;&nbsp;`upnAllowed` | boolean |Indicates whether User Principal Name (UPN) Subject Alternative Names are permitted ![TPP Only](https://img.shields.io/badge/TPP%20Only-orange.svg)|
 | `defaults` |||
-| &nbsp;&nbsp;`domain` |string|The domain suffix that should be used by default (e.g. "vfidev.com")|
+| &nbsp;&nbsp;`domain` |string|The domain suffix that should be used by default (e.g. "example.com")|
 | &nbsp;&nbsp;`subject` |||
-| &nbsp;&nbsp;&nbsp;&nbsp;`org` | string |The Organization (O) value that should be used by default (e.g. "Venafi, Inc.")|
+| &nbsp;&nbsp;&nbsp;&nbsp;`org` | string |The Organization (O) value that should be used by default (e.g. "Example, Inc.")|
 | &nbsp;&nbsp;&nbsp;&nbsp;`orgUnits` | string&nbsp;array |The Organizational Unit (OU) values that should be used by default (e.g. "Quality Assurance")|
 | &nbsp;&nbsp;&nbsp;&nbsp;`locality` | string |The City/Locality (L) value that should be used by default (e.g. "Salt Lake City")|
 | &nbsp;&nbsp;&nbsp;&nbsp;`state` | string |The State/Province (ST) value that should be used by default (e.g. "Utah")|
