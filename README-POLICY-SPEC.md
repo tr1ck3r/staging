@@ -85,7 +85,7 @@ specification and results in a policy that uses TPP or VaaS defaults.
 | &emsp;&emsp;`orgUnits` | string&nbsp;array | Organizational Unit (OU) values that are permitted |
 | &emsp;&emsp;`localities` | string&nbsp;array | City/Locality (L) values that are permitted |
 | &emsp;&emsp;`states` | string&nbsp;array | State/Province (ST) values that are permitted |
-| &emsp;&emsp;`countries` | string&nbsp;array | [ISO 3166 2-alpha](https://www.iso.org/obp/ui/#search) Country (C) code values that are permitted |
+| &emsp;&emsp;`countries` | string&nbsp;array | [ISO 3166 2-Alpha](https://www.iso.org/obp/ui/#search/code/) Country (C) code values that are permitted |
 | &emsp; `keyPair` |||
 | &emsp;&emsp;`keyTypes` | string&nbsp;array | Key algorithm: "RSA" and/or "ECDSA" ![TPP Only](https://img.shields.io/badge/TPP%20Only-orange.svg) |
 | &emsp;&emsp;`rsaKeySizes` | integer&nbsp;array | Permitted number of bits for RSA keys: 512, 1024, 2048, 3072, and/or 4096 |
@@ -105,7 +105,7 @@ specification and results in a policy that uses TPP or VaaS defaults.
 | &emsp;&emsp;`orgUnits` | string&nbsp;array |The Organizational Unit (OU) values that should be used by default (e.g. "Quality Assurance")|
 | &emsp;&emsp;`locality` | string |The City/Locality (L) value that should be used by default (e.g. "Salt Lake City")|
 | &emsp;&emsp;`state` | string |The State/Province (ST) value that should be used by default (e.g. "Utah")|
-| &emsp;&emsp;`country` | string |[ISO 3166 2-alpha](https://www.iso.org/obp/ui/#search) Country (C) code value that should be used by default (e.g. "US")|
+| &emsp;&emsp;`country` | string |[ISO 3166 2-Alpha](https://www.iso.org/obp/ui/#search/code/) Country (C) code value that should be used by default (e.g. "US")|
 | &emsp;`keyPair` |||
 | &emsp;&emsp;`keyType` | string |The key algorithm that should be used by default, "RSA" or "ECDSA" ![TPP Only](https://img.shields.io/badge/TPP%20Only-orange.svg)|
 | &emsp;&emsp;`rsaKeySize` | integer |The number of bits that should be used by default for RSA keys: 512, 1024, 2048, 3072, or 4096|
