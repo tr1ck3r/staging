@@ -1,0 +1,152 @@
+# firefly GraphQL schema file (https://graphql.org/learn/schema/)
+# to be processed with "go run github.com/99designs/gqlgen generate"
+
+schema {
+  mutation: Mutation
+}
+
+# Subject represents an X.509 subject distinguished name
+input Subject {
+  cn: String!
+  country: String
+  state: String
+  locality: String
+  organization: String
+  orgUnits: [String!]
+}
+
+# AltNames represents an X.509 subject alternate names
+input AltNames {
+  dnsNames: [String!]
+  ipAddresses: [String!]
+  emailAddresses: [String!]
+  uris: [String!]
+}
+
+
+
+# queries
+type Mutation { 
+  # CertificateRequest is a single certificate signing request and private key
+  # from a client. A request _must_ include at least a PEM encoded X.509
+  # certificate signing request, but should _not_ be signed by a client's
+  # private key . A client may optionally request other certificate attributes
+  # that cannot be encoded inside a certificate signing request. These
+  # additional attributes may or may not be honored based on the server's
+  # configuration and authorization policy.
+  # Requests may be denied by the server following a authorization review.
+  certificateRequest(input: CertificateRequest!) : CertificateRequestResponse! 
+
+  # CertificateSigningRequest is a single certificate signing request from a
+  # client. A request _must_ include at least a PEM encoded X.509 certificate
+  # signing request that has been signed by the client's private key. A client
+  # may optionally request other certificate attributes that cannot be encoded
+  # inside a certificate signing request. These addiational attributes may or
+  # may not be honred based on the server's configuration and authorization
+  # policy.
+  # Requests may be denied by the server following a authoirzation review.
+  certificateSigningRequest(input: CertificateSigningRequest!) : CertificateSigningRequestResponse!
+}
+
+# input parameters
+input CertificateRequest { 
+  # subject is an optional field used to specify desired subject distinguished name for the issued certificate.
+  subject: Subject!
+ 
+  # subject is an optional field used to specify desired subject alternate names for the issued certificate.
+  altNames: AltNames
+	  
+  # key_type is an optional field used to specify parameters for the public and private keys.
+  # The public key will be used to create the CSR which will be signed.
+  # The private key will be returned to the client together with the issued certificate.
+  keyType: KeyType
+ 
+  # validityPeriod is an optional field containing ISO8601 formatted duration the client wishes
+  # the resulting X.509 certificate is signed for.
+  # The specified Policy has same attribute, so the shorter duration will be used indeed.
+  validityPeriod : String
+
+  # policy_name contains the name of the Policy which the client wishes to request against.
+  policyName: String!
+}
+
+input CertificateSigningRequest { 
+  # request contains a single PEM encoded X.509 certificate signing request,
+  # which must be signed by the client's private key.
+  request: String!
+
+  # validityPeriod is an optional field containing ISO8601 formatted duration the client wishes
+  # the resulting X.509 certificate is signed for.
+  # The specified Policy has same attribute, so the shorter duration will be used indeed.
+  validityPeriod : String
+
+  # policy_name contains the name of the Policy which the client wishes to request against.
+  policyName: String!
+}
+
+# CertificateRequestResponse is the server's response to a single certificate
+# request from a client. The message contains a single PEM encoded X.509
+# certificate chain, including the client's requested leaf certificate. The
+# server will never return the root Certificate Authority (CA). The server may
+# respond with a single certificate if the root CA is the issuer.
+# The server will also respond with the client's PEM encoded private key,
+# which will be paired with the returned signed leaf certificate.
+# The leaf certificate is always the first certificate in the chain.
+# The chain will always be in order of increasing issuer authority.
+type CertificateRequestResponse {
+  # certificate_chain is the PEM encoded X.509 certificate chain returned in
+  # response to a certificate signing request.
+  # certificate_chain will never contain the root CA.
+  # The signed client's leaf certificate will always be first in the chain.
+  # The chain will always be in order of increasing issuer authority.
+  certificateChain: String!
+
+  # private_key is the PEM encoded private key which is paired with the
+  # client's leaf certificate at the head of the certificate_chain.
+  privateKey: String!
+}
+
+ 
+ 
+# CertificateSigningRequestResponse is the server's response to a single
+# certificate signing request from a client. The message contains a single PEM
+# encoded X.509 certificate chain, including the client's requested leaf
+# certificate. The server will never return the root Certificate Authority
+# (CA). The server may respond with a single certificate if the root CA is the
+# issuer.
+# The leaf certificate is always the first certificate in the chain.
+# The chain will always be in order of increasing issuer authority.
+type CertificateSigningRequestResponse {
+  # certificate_chain is the PEM encoded X.509 certificate chain returned in
+  # response to a certificate signing request.
+  # certificate_chain will never contain the root CA.
+  # The signed client's leaf certificate will always be first in the chain.
+  # The chain will always be in order of increasing issuer authority.
+  certificateChain: String!
+}
+
+
+ 
+# KeyType defines the parameters for the public and private keys.
+# It encodes the key algorithm(e.g. RSA algorithm) and some additional clarification(e.g. 2048 key size)
+enum KeyType {
+  # RSA_2048 is the Rivest–Shamir–Adleman public key algorithm with key size of 2048
+  RSA_2048,
+  # RSA_3072 is the Rivest–Shamir–Adleman public key algorithm with key size of 3072
+  RSA_3072,
+  # RSA_4096 is the Rivest–Shamir–Adleman public key algorithm with key size of 4096
+  RSA_4096,
+  #EC_P256 is the Elliptic Curve Digital Signature Algorithm, curve type P256
+  # https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+  EC_P256,
+  # EC_P384 is the Elliptic Curve Digital Signature Algorithm, curve type P384
+  #  https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+  EC_P384,
+  # EC_P521 is the Elliptic Curve Digital Signature Algorithm, curve type P521
+  # https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+  EC_P521,
+  # EC_ED25519 is a EdDSA using Curve25519
+  # https://en.wikipedia.org/wiki/EdDSA#Ed25519
+  EC_ED25519
+}
+ 
