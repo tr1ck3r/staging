@@ -15,7 +15,7 @@ Changelog:
 
 <ul>
 {% for asset in release.assets %}
-<li><a href="{{ asset.browser_download_url }}">{{ asset.name }}</a></li>
+<li><a href="{{ asset.browser_download_url | relative_url }}">{{ asset.name }}</a></li>
 {% endfor %}
 </ul>
 
